@@ -96,21 +96,11 @@ class MULTI_MODALITY_RCNN(Generalized_RCNN):
                 box_feat = self.Box_Head(blob_conv_for_RCNN, rpn_ret)
 
             if cfg.LESION.USE_POSITION:
-                # for res5_position
-                #if cfg.LESION.NUM_IMAGES_3DCE == 9:
-                    #res5_feat_ = res5_feat[1::3, ...]
-                #elif cfg.LESION.NUM_IMAGES_3DCE == 3:
-                    #res5_feat_ = res5_feat
-                #position_feat = self.Position_Head(res5_feat_)
-                #import pdb
-                #pdb.set_trace()
-                # attention+position
-                #print(blob_conv_for_RPN[0].shape)
                 if cfg.LESION.NUM_IMAGES_3DCE == 3:
                     position_feat = blob_conv_for_RPN[0]
                     n,c,h,w =position_feat.shape
                     position_feat = position_feat.view(3,256,h,w)
-                    print(position_feat.shape)
+                    #print(position_feat.shape)
                 elif cfg.LESION.NUM_IMAGES_3DCE == 9:
                     position_feat = blob_conv_for_RPN[0][:, 3*256:6*256,:,:]
                     n,c,h,w =position_feat.shape
