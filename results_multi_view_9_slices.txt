@@ -1,0 +1,69 @@
+MVP-Net 9 slices Without Position
+
+INFO json_dataset_evaluator.py: 234: ~~~~ Summary metrics ~~~~
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.372
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.677
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.376
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.002
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.512
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.424
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.557
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.750
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.550
+INFO json_dataset_evaluator.py: 201: Wrote json eval results to: Outputs/multi_windows/Dec11-13-37-58_lung-general-03_step/test/detection_results.pkl
+INFO json_dataset.py: 306: Loading cached gt_roidb from /data3/lizihao/DeepLesion/data/cache/lesion_test_gt_roidb.pkl
+FROC:FP in no-lesion-images:  79
+========================================
+Recall@0.5=73.00%
+Recall@1.0=81.09%
+Recall@2.0=87.15%
+Recall@3.0=89.21%
+Recall@4.0=90.92%
+Recall@4.7=91.61%
+Mean FROC is 85.50
+========================================
+INFO task_evaluation.py:  64: Evaluating bounding boxes is done!
+INFO task_evaluation.py: 207: copypaste: Dataset: lesion_test
+INFO task_evaluation.py: 209: copypaste: Task: box
+INFO task_evaluation.py: 212: copypaste: AP,AP50,AP75,APs,APm,APl
+INFO task_evaluation.py: 213: copypaste: 0.3719,0.6765,0.3757,0.0023,0.4407,0.5118
+
+
+ MVP-Net 9 slices With Position:
+
+INFO json_dataset_evaluator.py: 224: ~~~~ Mean and per-category AP @ IoU=[0.50,0.95] ~~~~
+INFO json_dataset_evaluator.py: 225: 37.4
+INFO json_dataset_evaluator.py: 233: 37.4
+INFO json_dataset_evaluator.py: 234: ~~~~ Summary metrics ~~~~
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.374
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.384
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.002
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.512
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.430
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.555
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.683
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.546
+INFO json_dataset_evaluator.py: 201: Wrote json eval results to: Outputs/multi_windows/Dec14-00-43-46_lung-general-03_step/test/detection_results.pkl
+INFO json_dataset.py: 306: Loading cached gt_roidb from /data3/lizihao/DeepLesion/data/cache/lesion_test_gt_roidb.pkl
+FROC:FP in no-lesion-images:  141
+========================================
+Recall@0.5=74.03%
+Recall@1.0=81.76%
+Recall@2.0=87.26%
+Recall@3.0=89.21%
+Recall@4.0=90.78%
+Recall@4.5=91.12%
+Mean FROC is 85.69
+========================================
+INFO task_evaluation.py:  64: Evaluating bounding boxes is done!
+INFO task_evaluation.py: 207: copypaste: Dataset: lesion_test
+INFO task_evaluation.py: 209: copypaste: Task: box
+INFO task_evaluation.py: 212: copypaste: AP,AP50,AP75,APs,APm,APl
+INFO task_evaluation.py: 213: copypaste: 0.3742,0.6843,0.3838,0.0022,0.4361,0.5123
