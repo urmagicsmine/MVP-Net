@@ -1,0 +1,14 @@
+#torch==0.4.1
+Cython
+matplotlib
+numpy
+scipy
+opencv-python
+pyyaml==3.12
+packaging
+pycocotools
+tensorboardX
+torchvision==0.2.0
+tensorflow
+SimpleITK
+cffi
